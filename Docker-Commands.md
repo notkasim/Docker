@@ -19,6 +19,7 @@
 | <C-P & Q>                         | to send a container to the background hold Controll and press P then Q  |
 | docker run -it -d -p 8080:80 nginx| creates and nginx container that is is listening for http connections  |
 | docker run -it -d --restart unless-stopped -p 8080:80 nginx  | runs a nginx container wich will be running unless its stopped manually |
+docker run -it -d -p 8080:80 --name web-server apache2-ubuntu
 | docker commit <CONTAINER ID> <IMAGE NAME>  | allows you to create an image from a container  |
 | docker commit nginx sahaltek-nginx:1.0   | creates an image named sahaltek-nginx:1.0 from the nginx images  |
 | docker commit <CONTAINER NAME> <IMAGE NAME>  |allows you to create an image from a container using container name   |
