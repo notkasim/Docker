@@ -11,7 +11,7 @@
 | docker pull <IMIGENAME>           | download a docker image without running it  |
 | docker ps                         | shows all the running containers  |
 | docker ps -a                      | show all the running and previosly run containers  |
-| docker run -it ubuntu /bind/bash  | runs a ubuntu container and the command /bind/bash  |
+| docker run -it ubuntu /bin/bash  | runs a ubuntu container and the command /bind/bash  |
 | docker run -it -d ubuntu          | run the container in the background  |
 | docker attach <CONTAINER ID>      | allows you to interace with a container  |
 | docker rename <CONTAINER NAME> NEWNAME  | allows you to rename a container  |

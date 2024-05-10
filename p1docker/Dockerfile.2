@@ -1,0 +1,17 @@
+# Initializes a new build stage and sets the Base image
+FROM nginx:latest
+
+# The RUN instruction will execute any commands to create a new layer on top of the current image.
+# RUN has two forms: Shell form and Exec form
+#shell form lets you escape newlines using backslash to continue a single instruction onto the next line. )
+RUN source $HOME/.bashrc && echo $HOME
+RUN sudo apt update && sudo apt upgrade
+
+#WORKDIR: sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions)
+WORKDIR /path/to/workdir
+
+#COPY: copies new files from <src> and adds them to the filesystem of the container at the path <dest>
+COPY nginx/virtualhost1 /etc/nginx/conf.d/virtualhost1
+
+
+ENTRYPOINT ["/bin/bash", "-c", "echo hello"]
