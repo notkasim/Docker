@@ -20,6 +20,7 @@ Compose simplifies the control of your entire application stack, making it easy 
 You  interact with your Compose application through the Compose CLI. Commands such as ```docker compose up``` are used to start the application, while ```docker compose down``` stops and removes the containers.
 
 ## Install Docker Compose Standalone
+### Linux (Ubuntu 24.04 LTS)
 > [!NOTE]
 > Here is the official link to the Docker compose standalone installation guide: [Docker Compose](https://docs.docker.com/compose/install/standalone/)
 
@@ -38,6 +39,23 @@ sudo chmod 755 /usr/local/bin/docker-compose && sudo chmod 755 /usr/local/bin/do
 ```
 
 3. *Test and execute compose commands using docker-compose.*
+
+
+### Windows 
+Follow these instructions if you are running the Docker daemon and client directly on Microsoft Windows Server and want to install Docker Compose.
+
+1. *Run PowerShell as an administrator. When asked if you want to allow this app to make changes to your device, select Yes in order to proceed with the installation.*
+
+2. *GitHub now requires TLS1.2. In PowerShell, run the following:*
+```
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+```
+
+3. *Run the following command to download the latest release of Compose (v2.27.0):*
+``` 
+Start-BitsTransfer -Source "https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-windows-x86_64.exe" -Destination $Env:ProgramFiles\Docker\docker-compose.exe
+```
+
 
 
 
