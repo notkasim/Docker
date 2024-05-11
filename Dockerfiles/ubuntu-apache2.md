@@ -9,5 +9,5 @@ RUN apt-get install --no-install-recommends -y neovim \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT apache2ctl -D FOREGROUND
+ENTRYPOINT ["apache2ctl", "-D", "FOREGROUND"]
 ```
